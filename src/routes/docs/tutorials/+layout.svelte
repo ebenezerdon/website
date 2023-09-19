@@ -1,8 +1,9 @@
 <script lang="ts">
-	import type { Tutorial } from '$markdoc/layouts/Tutorial.svelte';
-	import { setContext } from 'svelte';
-
-	setContext<Tutorial[]>('tutorials', []);
+	import Docs from '$lib/layouts/Docs.svelte';
+	import Sidebar from '../Sidebar.svelte';
 </script>
 
-<slot />
+<Docs variant="two-side-navs">
+	<Sidebar />
+	<slot />
+</Docs>
