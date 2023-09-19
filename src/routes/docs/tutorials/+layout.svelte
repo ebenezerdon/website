@@ -3,7 +3,7 @@
 	import Sidebar from '../Sidebar.svelte';
 </script>
 
-<Docs variant="two-side-navs">
+<Docs variant="default">
 	<Sidebar />
 	<slot />
 </Docs>
