@@ -3,13 +3,11 @@ name: Staging deployment
 on:
   push:
     branches:
-      - dev
       - main
-      - feat-dockerize-app
 
 env:
   TAG: ${{ github.sha }}
-  STACK_FILE: docker/docker-stack.stage.yml
+  STACK_FILE: docker/stage.yml
   REPOSITORY: website
 
 jobs:
