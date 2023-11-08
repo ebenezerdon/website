@@ -11,6 +11,10 @@
     const isDocs = getContext('isDocs') ?? false;
 </script>
 
-<a class="aw-link is-inline" class:aw-paragraph-lg={!isDocs} {href} {title} {target} {rel}
-    ><slot /></a
+<a
+    class="aw-link is-inline {isDocs ? 'aw-paragraph-md' : 'aw-paragraph-lg'}"
+    {href}
+    {title}
+    {target}
+    {rel}><slot /></a
 >
