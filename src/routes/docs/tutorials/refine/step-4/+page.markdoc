@@ -36,16 +36,19 @@ This allows the framework to identify resources from routes and efficiently hand
 
 
 ```ts
-import { authProvider } from './authProvider';
 import routerProvider from '@refinedev/react-router-v6';
+import { BrowserRouter } from 'react-router-dom';
+import { authProvider } from './authProvider';
 ...
 
- <Refine
+<BrowserRouter>
+    <Refine
+        ...
+        authProvider={authProvider}
+        routerProvider={routerProvider}
+    >
     ...
-    authProvider={authProvider}
-    routerProvider={routerProvider}
-
->
+</BrowserRouter>
 ```
 
 # Login page {% #login-page %}
@@ -117,7 +120,7 @@ const App: React.FC = () => {
                                     </Authenticated>
                                 }
                             >
-                                <Route path="/login" element={<AuthPage />} />
+                                <Route path="/login" element={<AuthPage forgotPasswordLink={false} />} />
                                 <Route
                                     path="/register"
                                     element={<AuthPage type="register" />}
