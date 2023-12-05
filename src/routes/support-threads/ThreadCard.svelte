@@ -11,15 +11,50 @@
 </script>
 
 {#key highlightTerms}
-    <div class="aw-card is-normal has-border-gradient thread">
-        <h3 class="aw-main-body-500" use:highlight={highlightTerms}>
-            {thread.name}
-        </h3>
+    <a
+        href="/support-threads/{thread.discord_id}"
+        class="aw-card is-normal has-border-gradient thread"
+    >
+        <div class="u-flex u-gap-8">
+            <h3 class="aw-main-body-500 aw-u-color-text-primary" use:highlight={highlightTerms}>
+                {thread.name}
+            </h3>
+            <time class="aw-caption-400 u-margin-inline-start-auto">12 Jan, 2023</time>
+        </div>
 
-        <a href="/support-threads/{thread.discord_id}">
-            <span class="icon-external-link" />
-        </a>
-    </div>
+        <!-- <p class="aw-main-body-500 u-margin-block-start-4">{thread.text}</p> -->
+        <p class="aw-main-body-500 u-margin-block-start-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem exercitationem obcaecati
+            odio, fuga blanditiis labore in nihil praesentium minus voluptates aperiam laboriosam id
+            nam nesciunt atque eius quasi facere nostrum.
+        </p>
+
+        <div class="u-flex u-main-space-between u-gap-16 u-margin-block-start-16">
+            <ul class="u-flex u-gap-8">
+                <li>
+                    <div class="aw-tag">Flutter</div>
+                </li>
+                <li>
+                    <div class="aw-tag">Self hosted</div>
+                </li>
+            </ul>
+
+            <ul class="u-flex u-gap-8">
+                <li>
+                    <div class="aw-icon-button is-more-content" aria-label="up votes">
+                        <span class="aw-icon-arrow-up" aria-hidden="true" />
+                        <span class="aw-caption-400 aw-u-line-height-1-2">4</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="aw-icon-button is-more-content" aria-label="responds">
+                        <span class="aw-icon-discord" aria-hidden="true" style="font-size:1rem" />
+                        <span class="aw-caption-400 aw-u-line-height-1-2">4</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </a>
 {/key}
 
 <style lang="scss">
@@ -33,15 +68,5 @@
 
     h3 {
         margin-block-end: 0.25rem;
-    }
-
-    a {
-        position: absolute;
-        right: 1rem;
-        top: 1rem;
-
-        &:hover {
-            opacity: 0.5;
-        }
     }
 </style>
