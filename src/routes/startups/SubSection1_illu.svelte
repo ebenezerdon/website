@@ -1,5 +1,5 @@
 <svg
-    class="web-u-drop-shadow u-max-width-100-percent"
+    class="u-max-width-100-percent"
     width="1259"
     height="505"
     viewBox="0 0 1259 505"
